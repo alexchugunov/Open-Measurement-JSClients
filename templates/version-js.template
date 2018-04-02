@@ -1,0 +1,5 @@
+goog.module('omid.common.version');
+
+const Version = '${semVersionString}-${buildVersion}';
+
+exports = {Version};
