@@ -27,7 +27,7 @@
     "build-verification-client": "gulp build-verification-client && gulp package-verification-client",
     "prebuild-unit-tests": "npm run prebuild",
     "build-unit-tests": "gulp build-unit-tests",
-    "preinstall": "npm run prebuild"
+    "postinstall": "npm run prebuild"
   },
   "repository": {
     "type": "git",
