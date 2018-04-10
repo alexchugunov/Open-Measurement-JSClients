@@ -27,7 +27,7 @@
     "build-verification-client": "gulp build-verification-client && gulp package-verification-client",
     "prebuild-unit-tests": "npm run prebuild",
     "build-unit-tests": "gulp build-unit-tests",
-    "postinstall": "npm run prebuild"
+    "preinstall": "npm run prebuild"
   },
   "repository": {
     "type": "git",
@@ -48,7 +48,6 @@
   "homepage": "https://github.com/InteractiveAdvertisingBureau/Open-Measurement-JSClients#readme",
   "private": true,
   "devDependencies": {
-    "es6-template-strings": "^2.0.1",
     "eslint": "4.6.1",
     "eslint-config-google": "0.9.1",
     "google-closure-compiler": "^20170626.0.0",
@@ -61,11 +60,12 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "mkdirp": "^0.5.1",
-    "npm-watch": "^0.2.0",
-    "rimraf": "^2.6.1"
+    "npm-watch": "^0.2.0"
   },
   "dependencies": {
-    "ajv": "^6.4.0"
+    "es6-template-strings": "^2.0.1",
+    "ajv": "^6.4.0",
+    "rimraf": "^2.6.1",
+    "mkdirp": "^0.5.1"
   }
 }
