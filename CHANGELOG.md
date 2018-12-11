@@ -1,5 +1,9 @@
 # Changelog for Open Measurement SDK JavaScript clients
 
+## 1.2.9 - 2018-12-10
+### Fixed
+- Fix crash related to resolveTopWindowContext on IE11.
+
 ## 1.2.8 - 2018-12-05
 - Update version to match JS Service, Android, and iOS SDKs; no changes from 1.2.7.
 

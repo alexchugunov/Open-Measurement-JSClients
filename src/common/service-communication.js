@@ -38,11 +38,13 @@ function resolveTopWindowContext(currentWindow = undefined) {
   // If no exception is thrown, then we are in a friendly iframe, so the correct window context
   // is window.top.
   try {
-    const trap = currentWindow.top.location.hostname;
-    // We don't want a simple "truthiness" check on the variable because hostname can be an empty
-    // string. If it's undefined, this is an unexpected situation, so use the current window
-    // context to be safe.
-    return (typeof trap === 'undefined' ? currentWindow : currentWindow.top);
+    const top = currentWindow.top;
+    // This check is tricky and subtle. We want to confirm that arbitrary properties on the top
+    // window are safely accessible, but we don't care what the value of the particular property
+    // we choose to check is. Compilation could remove this check if it is thought to not have
+    // side effects. We also should not use typeof on this value, because IE 11 has a bug where
+    // typeof window.top.inaccessibleProperty will return "undefined" rather than throw an error.
+    return (top['x'] === '' || top['x'] !== '') ? top : currentWindow;
   } catch (e) {
     return currentWindow;
   }

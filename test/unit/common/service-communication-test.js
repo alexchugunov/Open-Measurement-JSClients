@@ -60,6 +60,12 @@ describe('serviceCommunication', () => {
         top: /** @type {!Window} */ ({
         }),
       });
+      // resolveTopWindowContext tries to read top.x to check for access.
+      Object.defineProperty(mockWindow.top, 'x', {
+        get: () => {
+          throw new Error;
+        },
+      });
       const topWindowContext = resolveTopWindowContext(mockWindow);
       expect(topWindowContext).toEqual(mockWindow);
     });
