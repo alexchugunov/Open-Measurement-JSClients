@@ -1,5 +1,9 @@
 # Changelog for Open Measurement SDK JavaScript clients
 
+## 1.2.10 - 2019-01-11
+### Fixed
+- VerificationClient crashes on creation inside cross-domain iframe on iOS 9
+
 ## 1.2.9 - 2018-12-10
 ### Fixed
 - Fix crash related to resolveTopWindowContext on IE11.
