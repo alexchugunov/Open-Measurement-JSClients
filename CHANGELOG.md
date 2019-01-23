@@ -1,5 +1,9 @@
 # Changelog for Open Measurement SDK JavaScript clients
 
+## 1.2.11 - 2019-01-23
+### Fixed
+- Start IntersectionObserver after creative has non-zero area
+
 ## 1.2.10 - 2019-01-11
 ### Fixed
 - VerificationClient crashes on creation inside cross-domain iframe on iOS 9
