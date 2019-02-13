@@ -1,5 +1,10 @@
 # Changelog for Open Measurement SDK JavaScript clients
 
+## 1.2.12 - 2019-02-13
+### Fixed
+- Additional non-zero area check for IntersectionObserver
+- Remove non-deterministic behavior for IntersectionObserver
+
 ## 1.2.11 - 2019-01-23
 ### Fixed
 - Start IntersectionObserver after creative has non-zero area
